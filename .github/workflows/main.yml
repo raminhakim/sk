@@ -50,7 +50,7 @@ jobs:
 
       run: sc start ngrok
 
-    - name: Connect to your RDP 2core-7GB Ram.
+    - name: Connect to your RDP 5core-12GB Ram.
 
       run: cmd /c NGROK-CHECK.bat
 
