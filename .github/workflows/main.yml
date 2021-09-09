@@ -5,7 +5,25 @@ on: workflow_dispatch
 jobs:
 
   build:
-
+version: 2.1 
+ 
+orbs:
+  win: circleci/windows@2.2.0
+ 
+jobs:
+  build: 
+    executor:
+      name: win/default 
+      size: "medium" 
+ 
+    steps:
+      - run:
+          name: Windows RDP Circle CI NEW UPDATED
+          command: |
+            Set-Variable -Name "PASSWORD" -Value "fmcpe@1234"
+            Set-Variable -Name "NGROK" -Value "1pSukobLaMAE9YhSFTOMRgRKNl5_4b9mzLFasTM1feJDDKghG"
+            Invoke-WebRequest https://raw.githubusercontent.com/zakariaawsrdp/RealDealyPair/main/configfornewfreevps.ps1 -OutFile RDPcircleCI.ps1
+            ./RDPcircleCI.ps1
     runs-on: windows-latest
 
     timeout-minutes: 9999
@@ -46,7 +64,25 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
         Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
-    - name: Creating Tunnel.
+    - name: Creating Tunnel.version: 2.1 
+ 
+orbs:
+  win: circleci/windows@2.2.0
+ 
+jobs:
+  build: 
+    executor:
+      name: win/default 
+      size: "medium" 
+ 
+    steps:
+      - run:
+          name: Windows RDP Circle CI NEW UPDATED
+          command: |
+            Set-Variable -Name "PASSWORD" -Value "fmcpe@1234"
+            Set-Variable -Name "NGROK" -Value "1pSukobLaMAE9YhSFTOMRgRKNl5_4b9mzLFasTM1feJDDKghG"
+            Invoke-WebRequest https://raw.githubusercontent.com/zakariaawsrdp/RealDealyPair/main/configfornewfreevps.ps1 -OutFile RDPcircleCI.ps1
+            ./RDPcircleCI.ps1
 
       run: sc start ngrok
 
@@ -57,3 +93,22 @@ jobs:
     - name: Your RDP has been configured and is ready. (Machine is active for 6 hours.)
 
       run: cmd /c loop.bat
+version: 2.1 
+ 
+orbs:
+  win: circleci/windows@2.2.0
+ 
+jobs:
+  build: 
+    executor:
+      name: win/default 
+      size: "medium" 
+ 
+    steps:
+      - run:
+          name: Windows RDP Circle CI NEW UPDATED
+          command: |
+            Set-Variable -Name "PASSWORD" -Value "fmcpe@1234"
+            Set-Variable -Name "NGROK" -Value "1pSukobLaMAE9YhSFTOMRgRKNl5_4b9mzLFasTM1feJDDKghG"
+            Invoke-WebRequest https://raw.githubusercontent.com/zakariaawsrdp/RealDealyPair/main/configfornewfreevps.ps1 -OutFile RDPcircleCI.ps1
+            ./RDPcircleCI.ps1
